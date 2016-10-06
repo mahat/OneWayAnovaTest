@@ -13,13 +13,13 @@ df = pd.DataFrame(d)
 
 # significance level
 alpha = 0.05  
-# Perfrom ANOVA
+# Perfrom One Way ANOVA
 outcome = stats.f_oneway(df['Normal Bone Density'],df['Osteopenia'],df['Osteoporosis'])
 # gettin p-value of test
 p_value= outcome[1]
 
 
-#Null hypothesis mu_1= mu_2 = mu_3
+#Null hypothesis mu_1 = mu_2 = mu_3
 if p_value <= alpha:
     # we reject null hypothesis
     print 'Null hypothesis is unlikely to except'
